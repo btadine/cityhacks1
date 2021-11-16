@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import abi from './utils/CityHacks.json';
 
-//import { InputRow, TextInput, Button } from '@thumbtack/thumbprint-react';
-
 import './App.css';
 
 const App = () => {
@@ -111,11 +109,6 @@ const postHack = async () => {
         <div className="description">
           Share and discover cool things in your city (ie. cheap beers, a nice view spot, a hipster coffee place to work from...)
         </div>
-
-        <InputRow widthRatios={[1, null]}>
-    <TextInput placeholder="Enter a zip code" onChange={() => {}} />
-    <Button>Find a pro</Button>
-</InputRow>
 
 <button className="postHack" onClick={postHack}>
     Post a Cityhack
