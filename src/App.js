@@ -167,7 +167,7 @@ const postHack = async (text) => {
 
         await hackTxn.wait();
         console.log("Mined -- ", hackTxn.hash);
-
+        setTextValue("");
         count = await cityHacksContract.getTotalHacks();
         console.log("Retrieved total hack count...", count.toNumber());
       } else {
@@ -266,6 +266,7 @@ const postHack = async (text) => {
       aria-label="Your cityhack"
       aria-describedby="basic-addon2"
       onChange={handleChange}
+      value={textValue}
     />
     <Button className="postButton" variant="outline-secondary" id="button-addon2" onClick={handleClick}>
       Post
